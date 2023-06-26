@@ -1,0 +1,5 @@
+# test script to test that scripts can be run from files
+load test/assets/test_img.ppm test-img
+brighten test-img bright-test -10
+vertical-flip bright-test bright-flip
+save bright-flip test/assets/test_img_bright_flip.ppm

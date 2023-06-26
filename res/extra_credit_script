@@ -1,0 +1,27 @@
+# load in the image
+load view_of_castello.jpg img
+
+# load in masks for the image
+load castello-mask.png mask
+load castello-mask-2.png mask2
+
+# perform masked brightening and sepia operations
+brighten img img-bright 50 mask
+sepia-tone img-bright img-bright-sepia mask
+save img-bright-sepia masked-output1.png
+
+# perform 2 different masked operations on top of each other
+sharpen img img-sharp mask
+sharpen img-sharp img-sharp mask
+red-component img-sharp img-sharp-red mask2
+save img-sharp-red masked-output2.png
+
+# now do downscaling
+
+load castle.png castle
+downscale castle castle400400 400 400
+downscale castle castle400600 400 600
+downscale castle castle600400 600 400
+save castle400400 castle_400x400.png
+save castle600400 castle_600x400.png
+save castle400600 castle_400x600.png

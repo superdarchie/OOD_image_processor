@@ -1,0 +1,16 @@
+# a script demonstrating proper implementation of image downscaling
+
+# load the sample image
+load castle.png castle
+
+# downscale same aspect ratio 1:1
+downscale castle castle_400x400 400 400
+save castle_400x400 castle_400x400.png
+
+# downscale different aspect ratio 1.5:1
+downscale castle castle_600x400 600 400
+save castle_600x400 castle_600x400.png
+
+# downscale different aspect ratio 1:1.5
+downscale castle castle_400x600 400 600
+save castle_400x600 castle_400x600.png

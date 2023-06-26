@@ -1,0 +1,79 @@
+# a script demonstrating proper implementation of the partial image manipulation (masking)
+
+# load the sample mask and image to be partially manipulated
+load sample-mask.png mask
+load sample.png view
+
+# the following commands show the masked counterpart then the original command
+
+# brighten
+brighten view sample-mask-brighten-40 40 mask
+save sample-mask-brighten-40 sample-mask-brighten-40.png
+brighten view sample-brighten-40 40
+save sample-brighten-40 sample-brighten-40.png
+
+# horizontal flip
+horizontal-flip view sample-mask-horizontal-flip mask
+save sample-mask-horizontal-flip sample-mask-horizontal-flip.png
+horizontal-flip view sample-horizontal-flip
+save sample-horizontal-flip sample-horizontal-flip.png
+
+# vertical flip
+vertical-flip view sample-mask-vertical-flip mask
+save sample-mask-vertical-flip sample-mask-vertical-flip.png
+vertical-flip view sample-vertical-flip
+save sample-vertical-flip sample-vertical-flip.png
+
+# red component
+red-component view sample-mask-red-component mask
+save sample-mask-red-component sample-mask-red-component.png
+red-component view sample-red-component
+save sample-red-component sample-red-component.png
+
+# green component
+green-component view sample-mask-green-component mask
+save sample-mask-green-component sample-mask-green-component.png
+green-component view sample-green-component
+save sample-green-component sample-green-component.png
+
+# blue component
+blue-component view sample-mask-blue-component mask
+save sample-mask-blue-component sample-mask-blue-component.png
+blue-component view sample-blue-component
+save sample-blue-component sample-blue-component.png
+
+# value component
+value-component view sample-mask-value-component mask
+save sample-mask-value-component sample-mask-value-component.png
+value-component view sample-value-component
+save sample-value-component sample-value-component.png
+
+# intensity component
+intensity-component view sample-mask-intensity-component mask
+save sample-mask-intensity-component sample-mask-intensity-component.png
+intensity-component view sample-intensity-component
+save sample-intensity-component sample-intensity-component.png
+
+# greyscale (luma)
+luma-component view sample-mask-luma-component mask
+save sample-mask-luma-component sample-mask-luma-component.png
+luma-component view sample-luma-component
+save sample-luma-component sample-luma-component.png
+
+# gaussian blur
+gaussian-blur view sample-mask-gaussian-blur mask
+save sample-mask-gaussian-blur sample-mask-gaussian-blur.png
+gaussian-blur view sample-gaussian-blur
+save sample-gaussian-blur sample-gaussian-blur.png
+
+# sharpen
+sharpen view sample-mask-sharpen mask
+save sample-mask-sharpen sample-mask-sharpen.png
+sharpen view sample-sharpen
+save sample-sharpen sample-sharpen.png
+
+# sepia tone
+sepia-tone view sample-mask-sepia-tone mask
+save sample-mask-sepia-tone sample-mask-sepia-tone.png
+sepia-tone view sample-sepia-tone
+save sample-sepia-tone sample-sepia-tone.png
